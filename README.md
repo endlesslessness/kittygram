@@ -65,10 +65,13 @@ Full-stack приложение Kittygram. Backend реализует REST API �
 ### Через Docker (рекомендуется)
 
 1. Клонировать репозиторий:  
+```
 git clone https://github.com/endlesslessness/kittygram.git  
 cd kittygram  
+```
   
 2. Создать .env в корне проекта:  
+```
 env  
 POSTGRES_DB=kittygram  
 POSTGRES_USER=kittygram_user  
@@ -80,9 +83,13 @@ DJANGO_SECRET_KEY=your-secret-key-here
 DJANGO_DEBUG=False  
 DJANGO_ALLOWED_HOSTS=localhost,127.0.0.1  
 CSRF_TRUSTED_ORIGINS=http://localhost:9000,http://127.0.0.1:9000  
+```
   
 3. Запустить:  
-docker-compose up --build  
+```
+docker-compose up --build
+```
+  
 Приложение будет доступно по адресу: http://localhost:9000/  
 
 ### Локально (без Docker)
@@ -118,19 +125,24 @@ GET	/api/achievements/	Список достижений	Авторизован�
 
 ## Примеры запросов  
 Регистрация  
+```
 curl -X POST http://localhost:9000/api/users/ \  
   -H "Content-Type: application/json" \  
   -d '{"username": "user", "password": "pass12345"}'  
+```
 
 Получение токена  
+```
 curl -X POST http://localhost:9000/api/token/login/ \  
   -H "Content-Type: application/json" \  
   -d '{"username": "user", "password": "pass12345"}'  
+```
 
 Ответ:  
 {"auth_token": "abc123def456..."}  
 
 Создание кота с изображением в base64  
+```
 curl -X POST http://localhost:9000/api/cats/ \  
   -H "Authorization: Token <auth_token>" \  
   -H "Content-Type: application/json" \  
@@ -141,6 +153,7 @@ curl -X POST http://localhost:9000/api/cats/ \
     "achievements": [{"achievement_name": "Поймал мышь"}],  
     "image": "data:image/png;base64,iVBORw0KGgoAAAANS..."  
   }'  
+```
 
 ## Архитектурные решения  
 Nginx как reverse proxy  
