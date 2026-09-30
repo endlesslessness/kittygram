@@ -2,7 +2,6 @@ volumes:
   pg_data:
   static:
   media:
-  frontend_build:  # Новый volume для файлов фронтенда
 
 services:
   db:
@@ -31,9 +30,6 @@ services:
 
   frontend:
     build: ./frontend/
-    volumes:
-      - frontend_build:/app/build
-    command: sh -c "cp -r /app/build/. /app/build && npx serve -s build -l 8000"
     expose:
       - "8000"
 
@@ -44,7 +40,6 @@ services:
     volumes:
       - static:/static
       - media:/media
-      - frontend_build:/frontend_build
     depends_on:
       - backend
       - frontend
