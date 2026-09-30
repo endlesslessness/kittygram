@@ -33,31 +33,31 @@ Full-stack приложение Kittygram. Backend реализует REST API �
 - Docker, Docker Compose
 - Nginx (reverse proxy)
 
-## Архитектура
-┌─────────────────────────────────────────────┐
-│               Nginx (:9000)                 │
-│           /api/, /admin/ → backend          │
-│          /media/, /static/ → volumes        │
-│                   / → frontend              │
-└──────────┬──────────────────────┬───────────┘
-           │                      │
-    ┌──────▼──────┐        ┌──────▼──────┐
-    │ backend     │        │ frontend    │
-    │ (Django)    │        │ (React)     │
-    │ :8000       │        │ :8000       │
-    └──────┬──────┘        └─────────────┘
-           │
-    ┌──────▼──────┐
-    │      db     │
-    │ (PostgreSQL)│
-    └─────────────┘
+## Архитектура  
+┌─────────────────────────────────────────────┐  
+│               Nginx (:9000)                 │  
+│           /api/, /admin/ → backend          │  
+│          /media/, /static/ → volumes        │  
+│                   / → frontend              │  
+└──────────┬──────────────────────┬───────────┘  
+           │                      │  
+    ┌──────▼──────┐        ┌──────▼──────┐  
+    │ backend     │        │ frontend    │  
+    │ (Django)    │        │ (React)     │  
+    │ :8000       │        │ :8000       │  
+    └──────┬──────┘        └─────────────┘  
+           │  
+    ┌──────▼──────┐  
+    │      db     │  
+    │ (PostgreSQL)│  
+    └─────────────┘  
 
 
-4 сервиса в Docker Compose:
-- **db** — PostgreSQL 13
-- **backend** — Django + Gunicorn
-- **frontend** — React + http-server
-- **gateway** — Nginx (reverse proxy, порт 9000)
+4 сервиса в Docker Compose:  
+- **db** — PostgreSQL 13  
+- **backend** — Django + Gunicorn  
+- **frontend** — React + http-server  
+- **gateway** — Nginx (reverse proxy, порт 9000)  
 
 ## Запуск
 
