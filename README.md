@@ -40,13 +40,13 @@ Full-stack приложение Kittygram. Backend реализует REST API �
 │          /media/, /static/ → volumes        │  
 │                   / → frontend              │  
 └──────────┬──────────────────────┬───────────┘  
-           │                      │  
+           │                      │                 
     ┌──────▼──────┐        ┌──────▼──────┐  
     │ backend     │        │ frontend    │  
     │ (Django)    │        │ (React)     │  
     │ :8000       │        │ :8000       │  
     └──────┬──────┘        └─────────────┘  
-           │  
+           │                  
     ┌──────▼──────┐  
     │      db     │  
     │ (PostgreSQL)│  
@@ -230,6 +230,6 @@ kittygram/
 - Добавить throttling для защиты от брутфорса  
 
 ## Контакты
-GitHub: @endlesslessness
-tg: @endlesslessness
-Email: yan.lejn@mail.ri
+GitHub: @endlesslessness  
+tg: @endlesslessness  
+Email: yan.lejn@mail.ru  
