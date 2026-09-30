@@ -193,17 +193,23 @@ Authorization: Token <token> в последующих запросах.
 пагинации.
 
 ## Скриншоты  
+Страница регистрации  
+https://screenshots/01-registration-page.png  
+  
 Главная страница  
-https://screenshots/01-main-page.png
+https://screenshots/02-main-page.png  
   
-Список котов (API)  
-https://screenshots/02-api-cats.png
+Создание поста  
+https://screenshots/03-new-post.png  
   
-Админка Django  
-https://screenshots/03-admin.png
+Просмотр поста  
+https://screenshots/04-single-post.png  
   
 API Root  
-https://screenshots/04-api-root.png
+https://screenshots/05-api-root.png  
+  
+Список котов (API)  
+https://screenshots/06-api-cats.png  
   
 ## Структура проекта  
 kittygram/  
