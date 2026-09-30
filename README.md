@@ -193,23 +193,17 @@ Authorization: Token <token> в последующих запросах.
 пагинации.
 
 ## Скриншоты  
-Страница регистрации  
-/screenshots/01-registration-page.png  
+![Страница регистрации](screenshots/01-registration-page.png)  
   
-Главная страница  
-/screenshots/02-main-page.png  
+![Главная страница](screenshots/02-main-page.png)  
   
-Создание поста  
-/screenshots/03-new-post.png  
+![Создание поста](screenshots/03-new-post.png)  
   
-Просмотр поста  
-/screenshots/04-single-post.png  
+![Просмотр поста](screenshots/04-single-post.png)  
   
-API Root  
-/screenshots/05-api-root.png  
+![API Root](screenshots/05-api-root.png)  
   
-Список котов (API)  
-/screenshots/06-api-cats.png  
+![Список котов (API)](screenshots/06-api-cats.png)  
   
 ## Структура проекта  
 kittygram/  
