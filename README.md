@@ -94,21 +94,23 @@ docker-compose up --build
 
 ### Локально (без Docker)
 Backend:
-
+```
 cd backend
 python3 -m venv venv
 source venv/bin/activate       # Linux/macOS
-# venv\Scripts\activate        # Windows
+venv\Scripts\activate          # Windows
 
 pip install -r requirements.txt
 python manage.py migrate
 python manage.py runserver
+```
 
 Frontend:
+```
 cd frontend
 npm ci
 npm run start
-
+```
 
 ## Основные эндпоинты  
 Метод	Эндпоинт	Описание	Доступ  
