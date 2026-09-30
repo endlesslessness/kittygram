@@ -33,7 +33,8 @@ Full-stack приложение Kittygram. Backend реализует REST API �
 - Docker, Docker Compose
 - Nginx (reverse proxy)
 
-## Архитектура  
+## Архитектура 
+``` 
 ┌─────────────────────────────────────────────┐  
 │               Nginx (:9000)                 │  
 │           /api/, /admin/ → backend          │  
@@ -51,7 +52,7 @@ Full-stack приложение Kittygram. Backend реализует REST API �
     │      db     │  
     │ (PostgreSQL)│  
     └─────────────┘  
-
+```
 
 4 сервиса в Docker Compose:  
 - **db** — PostgreSQL 13  
@@ -63,26 +64,26 @@ Full-stack приложение Kittygram. Backend реализует REST API �
 
 ### Через Docker (рекомендуется)
 
-1. Клонировать репозиторий:
-git clone https://github.com/endlesslessness/kittygram.git
-cd kittygram
-
-2. Создать .env в корне проекта:
-env
-POSTGRES_DB=kittygram
-POSTGRES_USER=kittygram_user
-POSTGRES_PASSWORD=kittygram_password
-DB_HOST=db
-DB_PORT=5432
-
-DJANGO_SECRET_KEY=your-secret-key-here
-DJANGO_DEBUG=False
-DJANGO_ALLOWED_HOSTS=localhost,127.0.0.1
-CSRF_TRUSTED_ORIGINS=http://localhost:9000,http://127.0.0.1:9000
-
-3. Запустить:
-docker-compose up --build
-Приложение будет доступно по адресу: http://localhost:9000/
+1. Клонировать репозиторий:  
+git clone https://github.com/endlesslessness/kittygram.git  
+cd kittygram  
+  
+2. Создать .env в корне проекта:  
+env  
+POSTGRES_DB=kittygram  
+POSTGRES_USER=kittygram_user  
+POSTGRES_PASSWORD=kittygram_password  
+DB_HOST=db  
+DB_PORT=5432  
+  
+DJANGO_SECRET_KEY=your-secret-key-here  
+DJANGO_DEBUG=False  
+DJANGO_ALLOWED_HOSTS=localhost,127.0.0.1  
+CSRF_TRUSTED_ORIGINS=http://localhost:9000,http://127.0.0.1:9000  
+  
+3. Запустить:  
+docker-compose up --build  
+Приложение будет доступно по адресу: http://localhost:9000/  
 
 ### Локально (без Docker)
 Backend:
